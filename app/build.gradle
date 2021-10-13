@@ -6,14 +6,18 @@ plugins {
 android {
     compileSdk 31
 
+
     defaultConfig {
         applicationId "nl.dylandavid.project2.duoapp"
         minSdk 30
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {

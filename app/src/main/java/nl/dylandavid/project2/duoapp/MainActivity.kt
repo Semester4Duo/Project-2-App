@@ -9,21 +9,22 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabItem
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import nl.dylandavid.project2.duoapp.databinding.ActivityMainBinding
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab1Binding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var tablayout: TabLayout
-    lateinit var viewPager: ViewPager2
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        tablayout = findViewById(R.id.tabLayout)
-        viewPager = findViewById(R.id.view_pager)
-        viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle, tablayout.tabCount)
-        tablayout.addOnTabSelectedListener(object : OnTabSelectedListener {
+        binding.viewPager.adapter = PagerAdapter(supportFragmentManager, lifecycle, binding.tabLayout.tabCount)
+        binding.tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                viewPager.currentItem = tab?.position!!
+                binding.viewPager.currentItem = tab?.position!!
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
@@ -36,9 +37,9 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
-                tablayout.selectTab(tablayout.getTabAt(position))
+                binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position))
             }
         })
     }
