@@ -7,8 +7,9 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/CountText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="ayylmao2" />
+        android:text="0" />
 
 </FrameLayout>

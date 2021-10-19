@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab2Binding
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab3Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +19,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Tab3Fragment : Fragment() {
+    private lateinit var binding: FragmentTab3Binding
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +38,8 @@ class Tab3Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab3, container, false)
+        binding = FragmentTab3Binding.inflate(inflater)
+        return binding.root
     }
 
     companion object {

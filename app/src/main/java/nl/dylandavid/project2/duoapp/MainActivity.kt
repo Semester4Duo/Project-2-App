@@ -36,12 +36,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
-        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
-            override fun onPageSelected(position: Int) {
-                binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position))
-            }
-        })
     }
 
 

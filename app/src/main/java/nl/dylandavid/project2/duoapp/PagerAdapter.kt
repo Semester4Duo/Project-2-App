@@ -2,10 +2,7 @@ package nl.dylandavid.project2.duoapp
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.Lifecycle
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class PagerAdapter : FragmentStateAdapter {
