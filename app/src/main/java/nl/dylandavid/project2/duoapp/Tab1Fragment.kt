@@ -1,10 +1,14 @@
 package nl.dylandavid.project2.duoapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.fragment_tab1.*
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab1Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,9 +21,19 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Tab1Fragment : Fragment() {
+    private lateinit var binding: FragmentTab1Binding
+    private lateinit var nContext: Context
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var todoAdapter: TodoAdapter
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        nContext = context
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +47,26 @@ class Tab1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentTab1Binding.inflate(inflater)
+
+        todoAdapter = TodoAdapter(mutableListOf())
+        binding.rvTodoList.layoutManager = LinearLayoutManager(nContext)
+        binding.rvTodoList.adapter = todoAdapter
+
+
+        binding.btnAddTodo.setOnClickListener{
+            val todoTitle = etTodoTitle.text.toString()
+            if(todoTitle.isNotEmpty()){
+                val todo = Todo(todoTitle)
+                todoAdapter.addTodo(todo)
+                binding.etTodoTitle.text.clear()
+            }
+        }
+        binding.btnDeleteTodo.setOnClickListener{
+            todoAdapter.deleteTodo()
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab1, container, false)
+        return binding.root
     }
 
     companion object {

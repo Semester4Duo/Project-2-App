@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/background_gradient.xml" value="0.2703125" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab1.xml" value="0.264" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/item_todo.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/first.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab1.xml" value="0.18" />
