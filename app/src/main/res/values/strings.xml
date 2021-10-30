@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DuoApp</string>
+    <string name="checkup">Check-up</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="lifestyle">Lifestyle</string>
 </resources>

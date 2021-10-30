@@ -24,6 +24,7 @@ class PagerAdapter : FragmentStateAdapter {
             0 -> return Tab1Fragment()
             1 -> return Tab2Fragment()
             2 -> return Tab3Fragment()
+            3 -> return Tab4Fragment()
         }
         return Fragment()
     }
