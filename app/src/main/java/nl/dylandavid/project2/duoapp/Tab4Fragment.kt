@@ -5,6 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_tab4.view.*
+import android.content.Intent
+import android.content.res.Resources
+import android.net.Uri
+import android.graphics.BitmapFactory
+
+import android.graphics.Bitmap
+import kotlinx.android.synthetic.main.fragment_tab4.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,7 +46,43 @@ class Tab4Fragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_tab4, container, false)
         // Inflate the layout for this fragment
 
+        view.healthy_image.setImageBitmap(getBitmapFromResources(resources, R.mipmap.gezond_eten));
+        view.exercise_image.setImageBitmap(getBitmapFromResources(resources, R.mipmap.bewegen));
+        view.relax_image.setImageBitmap(getBitmapFromResources(resources, R.mipmap.ontspannen));
+
+        view.healthy_button.setOnClickListener {
+            val uri: Uri =
+                Uri.parse("https://www.hartstichting.nl/gezond-leven/gezond-eten") // missing 'http://' will cause crashed
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        view.exercise_button.setOnClickListener {
+            val uri: Uri =
+                Uri.parse("https://www.hartstichting.nl/gezond-leven/beweging") // missing 'http://' will cause crashed
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+        view.relax_button.setOnClickListener {
+            val uri: Uri =
+                Uri.parse("https://www.hartstichting.nl/risicofactoren/stress/minder-stress-in-je-leven") // missing 'http://' will cause crashed
+
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
         return view
+    }
+
+    fun getBitmapFromResources(resources: Resources?, resImage: Int): Bitmap? {
+        val options = BitmapFactory.Options()
+        options.inJustDecodeBounds = false
+        options.inDither = false
+        options.inSampleSize = 1
+        options.inScaled = false
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888
+        return BitmapFactory.decodeResource(resources, resImage, options)
     }
 
     companion object {
