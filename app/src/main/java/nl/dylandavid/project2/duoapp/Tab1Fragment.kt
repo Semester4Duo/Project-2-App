@@ -1,10 +1,11 @@
 package nl.dylandavid.project2.duoapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_tab1.view.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import nl.dylandavid.project2.duoapp.data.Bmi
@@ -46,6 +47,7 @@ class Tab1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_tab1, container, false)
         // Inflate the layout for this fragment
         _binding = FragmentTab1Binding.inflate(inflater, container, false)
         mBmiViewModel = ViewModelProvider(this).get(BmiViewModel::class.java)
@@ -93,6 +95,10 @@ class Tab1Fragment : Fragment() {
             dialog.show(parentFragmentManager, ("FragmentHeartRate"))
         }
         return binding.root
+        binding.imageButton2.clipToOutline = true
+        binding.imageButton22.clipToOutline = true
+
+        return view;
     }
 
     companion object {

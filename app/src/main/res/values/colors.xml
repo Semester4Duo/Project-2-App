@@ -5,6 +5,7 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="red_primary">#FFC9184A</color>
+    <color name="green">#FF18C95F</color>
     <color name="red_background">#FFFFF0F3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -15,6 +16,7 @@
     <color name="gray_400">#FFBDBDBD</color>
     <color name="gray_600">#FF757575</color>
     <color name="text_primary">#000</color>
+    <color name="text_hostbutton">#FFF</color>
     <color name="text_secondary">#3D3D3D</color>
     <color name="info_icon">#9C9C9C</color>
 </resources>
