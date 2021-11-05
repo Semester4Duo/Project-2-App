@@ -1,5 +1,8 @@
 package nl.dylandavid.project2.duoapp
 
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,52 +56,22 @@ class Tab1Fragment : Fragment() {
         mBmiViewModel = ViewModelProvider(this).get(BmiViewModel::class.java)
         mBpViewModel = ViewModelProvider(this).get(BpViewModel::class.java)
 
-        mBmiViewModel.readBmi.observe(viewLifecycleOwner, Observer {bmi ->
-            if(bmi != null) {
-                binding.tvBMIVal.text = bmi.bmi
-                binding.tvBMIUpdate.text = "Last update " + bmi.lastUpdate
-                binding.tvWeightVal.text = bmi.weight + "kg"
-                binding.tvWCVal.text = bmi.wc + "cm"
-            }else{
-                binding.tvBMIVal.text = "24.2"
-                binding.tvBMIUpdate.text = "Last update 12-09-2021"
-                binding.tvWeightVal.text = "80kg"
-                binding.tvWCVal.text = "80cm"
-            }
-        })
-
-        mBpViewModel.readBp.observe(viewLifecycleOwner, Observer {bp ->
-            if(bp != null) {
-                binding.tvBPVal.text = bp.bpUp + "/" + bp.bpLow
-                binding.tvBPUpdate.text = "Last update " +bp.lastUpdate
-                binding.tvHRVal.text = bp.heartRate
-                binding.tvHRUpdate.text = "Last update " +bp.lastUpdateHeartRate
-            }else{
-                binding.tvBPVal.text = "170/108"
-                binding.tvBPUpdate.text = "Last update 12-09-2021"
-                binding.tvHRVal.text = "66"
-                binding.tvHRUpdate.text = "Last update 12-09-2021"
-            }
-
-        })
-        binding.btnMeasureBMI.setOnClickListener {
-            var dialog = FragmentBmi()
-            dialog.show(parentFragmentManager, ("FragmentBmi"))
-        }
-        binding.btnMeasureBP.setOnClickListener{
-            var dialog = FragmentBloodPressure()
-            dialog.show(parentFragmentManager, ("FragmentBloodPressure"))
-
-        }
-        binding.btnMeasureHR.setOnClickListener {
-            var dialog = FragmentHeartRate()
-            dialog.show(parentFragmentManager, ("FragmentHeartRate"))
-        }
-        return binding.root
-        binding.imageButton2.clipToOutline = true
-        binding.imageButton22.clipToOutline = true
+        _binding.imageButton22.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+        _binding.imageButton2.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
 
         return view;
+    }
+
+    fun getBitmapFromResources(resources: Resources?, resImage: Int): Bitmap? {
+        val options = BitmapFactory.Options()
+        options.inJustDecodeBounds = false
+        options.inDither = false
+        options.inSampleSize = 1
+        options.inScaled = false
+        options.outHeight = 128
+        options.outWidth= 128
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888
+        return BitmapFactory.decodeResource(resources, resImage, options)
     }
 
     companion object {

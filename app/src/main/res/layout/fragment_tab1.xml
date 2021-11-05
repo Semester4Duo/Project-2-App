@@ -36,7 +36,7 @@
             android:scaleX="1.1"
             android:scaleY="1.1"
             android:visibility="visible"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/doctor2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -327,7 +327,7 @@
             android:scaleX="1.1"
             android:scaleY="1.1"
             android:visibility="visible"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/doctor2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

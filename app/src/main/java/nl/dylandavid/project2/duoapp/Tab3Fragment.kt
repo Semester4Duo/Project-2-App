@@ -5,13 +5,18 @@ import android.content.Context
 import android.content.Context.BIND_AUTO_CREATE
 import android.content.Intent
 import android.content.ServiceConnection
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.IBinder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_tab1.view.*
 import kotlinx.android.synthetic.main.fragment_tab3.view.*
+import kotlinx.android.synthetic.main.fragment_tab3.view.imageButton2
 import nl.dylandavid.project2.duoapp.LocalService.LocalBinder
 import java.util.*
 
@@ -124,6 +129,7 @@ class Tab3Fragment : Fragment() {
         // Inflate the layout for this fragment
         currentView = inflater.inflate(R.layout.fragment_tab3, container, false)
         currentView!!.imageButton2.clipToOutline = true
+        currentView!!.imageButton2.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
 
         currentView!!.hostcallButton.setOnClickListener{
             if(conferenceId.isNullOrEmpty()){
@@ -138,6 +144,16 @@ class Tab3Fragment : Fragment() {
         val mIntent = Intent(mContext, LocalService::class.java)
         mContext.bindService(mIntent, mConnection, BIND_AUTO_CREATE)
         return currentView;
+    }
+
+    fun getBitmapFromResources(resources: Resources?, resImage: Int): Bitmap? {
+        val options = BitmapFactory.Options()
+        options.inJustDecodeBounds = false
+        options.inDither = false
+        options.inSampleSize = 1
+        options.inScaled = false
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888
+        return BitmapFactory.decodeResource(resources, resImage, options)
     }
 
     private fun call(conferenceId: String, isJoin: Boolean){

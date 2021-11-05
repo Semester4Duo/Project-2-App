@@ -70,7 +70,7 @@
             android:padding="5dp"
             android:scaleX="1.1"
             android:scaleY="1.1"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/doctor2"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
