@@ -48,6 +48,7 @@
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/circle_profile_small.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/curve_background.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.17604166666666668" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/ic_baseline_event_24.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.28958333333333336" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/drawable/ic_baseline_mic_off_24.xml" value="0.21145833333333333" />
@@ -69,9 +70,10 @@
 >>>>>>> Started video calling feature
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/first.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_card.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_note.xml" value="0.33" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab1.xml" value="0.32842105263157895" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab2.xml" value="0.12047101449275362" />
-        <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab3.xml" value="0.33" />
+        <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab3.xml" value="0.22" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab4.xml" value="0.33" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/sample_full_width_card.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/sample_my_view.xml" value="0.20520833333333333" />

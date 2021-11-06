@@ -5,12 +5,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class PagerAdapter : FragmentStateAdapter {
-    private var numOfTabs: Int
-
-    constructor(fm : FragmentManager, lf : Lifecycle, numOfTabs : Int) : super(fm, lf) {
-        this.numOfTabs = numOfTabs
-    }
+class PagerAdapter(fm: FragmentManager, lf: Lifecycle, private var numOfTabs: Int) :
+    FragmentStateAdapter(fm, lf) {
 
     override fun getItemCount(): Int {
         return numOfTabs
@@ -25,5 +21,4 @@ class PagerAdapter : FragmentStateAdapter {
         }
         return Fragment()
     }
-
 }

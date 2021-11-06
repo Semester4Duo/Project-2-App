@@ -14,10 +14,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_tab1.view.*
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_tab3.view.*
 import kotlinx.android.synthetic.main.fragment_tab3.view.imageButton2
 import nl.dylandavid.project2.duoapp.LocalService.LocalBinder
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -130,6 +133,37 @@ class Tab3Fragment : Fragment() {
         currentView = inflater.inflate(R.layout.fragment_tab3, container, false)
         currentView!!.imageButton2.clipToOutline = true
         currentView!!.imageButton2.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+
+        currentView!!.noteViewPager.adapter = NoteAdapter(parentFragmentManager, lifecycle)
+        currentView!!.noteViewPager.currentItem = 6
+
+        val dtf: DateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+        val now: LocalDateTime = LocalDateTime.now()
+
+        currentView!!.dateText.text = dtf.format(now)
+
+        currentView!!.noteViewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                if(position==20){
+                    currentView!!.dateText.text = dtf.format(now)
+                }
+
+                if(position<20){
+                    currentView!!.dateText.text = dtf.format(now.plusDays(position-6L))
+                }
+
+                if(position>20){
+                    currentView!!.dateText.text = dtf.format(now.minusDays(position-6L))
+                }
+            }
+        })
+
+        currentView!!.left_chevron.setOnClickListener {
+            currentView!!.noteViewPager.currentItem = currentView!!.noteViewPager.currentItem - 1
+        }
+        currentView!!.right_chevron.setOnClickListener {
+            currentView!!.noteViewPager.currentItem = currentView!!.noteViewPager.currentItem + 1
+        }
 
         currentView!!.hostcallButton.setOnClickListener{
             if(conferenceId.isNullOrEmpty()){
