@@ -5,13 +5,19 @@
       <map>
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/background_gradient.xml" value="0.2703125" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/button_cancel.xml" value="0.11973684210526316" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/button_large.xml" value="0.2703125" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/chevron_down.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/chevron_up.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/circle_profile_small.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_event_24.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.12324561403508771" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.22763157894736843" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_running_24.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_baseline_scale_24.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
@@ -25,9 +31,14 @@
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/tab_home.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/drawable/tab_profile.xml" value="0.2703125" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab1.xml" value="0.6" />
-        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_blood_pressure.xml" value="0.6" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_bmi.xml" value="0.264" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_heart_rate.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab1.xml" value="0.72" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/fragment_tab2.xml" value="0.4" />
         <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/item_todo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/profile_child_item.xml" value="0.264" />
+        <entry key="..\:/Users/DRoze/Documents/school/semester4/Project-2-App/app/src/main/res/layout/profile_group_item.xml" value="0.4" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/first.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Kurza/AndroidStudioProjects/DuoApp/app/src/main/res/layout/fragment_tab1.xml" value="0.18" />

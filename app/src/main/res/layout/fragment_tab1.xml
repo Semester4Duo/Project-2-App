@@ -40,12 +40,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_message_24"
+            android:clipToOutline="true"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView32"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/ic_baseline_phone_24"
+            android:clipToOutline="true"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.508" />
+
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingLeft="10dp"
-            android:text="Contact Assistent"
+            android:text="Contact Your GP"
             android:textAllCaps="false"
             android:textAppearance="@style/large_card_header"
             android:textStyle="bold"
@@ -55,17 +86,35 @@
 
         <TextView
             android:id="@+id/textView32"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="218dp"
+            android:layout_height="30dp"
             android:fontFamily="sans-serif-light"
             android:paddingLeft="10dp"
-            android:text="Your next checkup with Dr Rozenberg is scheduled for the 24th of November"
+            android:text="For any questions please contact us by sending a message or calling"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/text_primary"
-            app:layout_constraintEnd_toEndOf="parent"
+
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageButton22"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="10dp"
+            android:text="in case of emergency always dial 112"
+            android:textAllCaps="false"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_secondary"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton22"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -175,10 +224,10 @@
             android:textSize="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvBMICard" />
+            app:layout_constraintTop_toBottomOf="@+id/tvBPCard" />
 
         <TextView
-            android:id="@+id/tvBMICard"
+            android:id="@+id/tvBPCard"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
 
@@ -204,7 +253,7 @@
             android:textAllCaps="false"
             android:textColor="@color/red_primary"
             android:textSize="12dp"
-            app:layout_constraintStart_toEndOf="@+id/tvBMICard"
+            app:layout_constraintStart_toEndOf="@+id/tvBPCard"
             app:layout_constraintTop_toTopOf="parent" />
 
 
