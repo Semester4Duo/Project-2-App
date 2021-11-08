@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import nl.dylandavid.project2.duoapp.data.BloodPressure
 import nl.dylandavid.project2.duoapp.data.Bmi
 import nl.dylandavid.project2.duoapp.data.BmiViewModel

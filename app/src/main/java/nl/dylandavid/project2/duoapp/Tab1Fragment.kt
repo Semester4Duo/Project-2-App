@@ -56,8 +56,8 @@ class Tab1Fragment : Fragment() {
         mBmiViewModel = ViewModelProvider(this).get(BmiViewModel::class.java)
         mBpViewModel = ViewModelProvider(this).get(BpViewModel::class.java)
 
-        _binding.imageButton22.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
-        _binding.imageButton2.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+        _binding?.imageButton22?.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+        _binding?.imageButton2?.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
 
         return view;
     }
