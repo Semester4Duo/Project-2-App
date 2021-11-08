@@ -1,15 +1,28 @@
 package nl.dylandavid.project2.duoapp
 
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_tab1.view.*
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import kotlinx.android.synthetic.main.fragment_tab3.view.*
+import nl.dylandavid.project2.duoapp.data.Bmi
+import nl.dylandavid.project2.duoapp.data.BmiViewModel
+import nl.dylandavid.project2.duoapp.data.BpViewModel
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab1Binding
+import nl.dylandavid.project2.duoapp.databinding.FragmentTab2Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -21,6 +34,11 @@ class Tab1Fragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private var _binding: FragmentTab1Binding? = null
+    private lateinit var mBmiViewModel: BmiViewModel
+    private lateinit var mBpViewModel: BpViewModel
+
+    val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +52,28 @@ class Tab1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab1, container, false)
+        _binding = FragmentTab1Binding.inflate(inflater, container, false)
+        mBmiViewModel = ViewModelProvider(this).get(BmiViewModel::class.java)
+        mBpViewModel = ViewModelProvider(this).get(BpViewModel::class.java)
+
+        binding.imageButton22?.clipToOutline = true
+        binding.imageButton2?.clipToOutline = true
+        binding.imageButton22?.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+        binding.imageButton2?.setImageBitmap(getBitmapFromResources(resources, R.drawable.doctor5))
+
+        return binding.root;
+    }
+
+    fun getBitmapFromResources(resources: Resources?, resImage: Int): Bitmap? {
+        val options = BitmapFactory.Options()
+        options.inJustDecodeBounds = false
+        options.inDither = false
+        options.inSampleSize = 1
+        options.inScaled = false
+        options.outHeight = 128
+        options.outWidth= 128
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888
+        return BitmapFactory.decodeResource(resources, resImage, options)
     }
 
     companion object {

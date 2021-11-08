@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_primary">#FFC9184A</color>
+    <color name="red_background">#FF2B0910</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#E1E1E1</color>
+    <color name="info_icon">#928080</color>
+</resources>

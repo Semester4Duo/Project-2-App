@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893670960573",
+    "project_id": "e-consultant-a1658",
+    "storage_bucket": "e-consultant-a1658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893670960573:android:ece54a0e308b3915c7f6d4",
+        "android_client_info": {
+          "package_name": "nl.dylandavid.project2.duoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893670960573-pi5tm27q20jhdebnvk5ognm9e64hmpfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt_j4RIaqAuY1yZ6gAHm5isDtmpa5IgX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893670960573-pi5tm27q20jhdebnvk5ognm9e64hmpfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

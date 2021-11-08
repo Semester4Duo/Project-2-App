@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/tab1Fragment">
+
+    <fragment
+        android:id="@+id/fragmentBmi"
+        android:name="nl.dylandavid.project2.duoapp.FragmentBmi"
+        android:label="fragment_bmi"
+        tools:layout="@layout/fragment_bmi" >
+        <action
+            android:id="@+id/action_fragmentBmi_to_tab1Fragment"
+            app:destination="@id/tab1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tab1Fragment"
+        android:name="nl.dylandavid.project2.duoapp.Tab1Fragment"
+        android:label="fragment_tab2"
+        tools:layout="@layout/fragment_tab2" >
+        <action
+            android:id="@+id/action_tab1Fragment_to_fragmentBmi"
+            app:destination="@id/fragmentBmi" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBloodPressure"
+        android:name="nl.dylandavid.project2.duoapp.FragmentBloodPressure"
+        android:label="fragment_blood_pressure"
+        tools:layout="@layout/fragment_blood_pressure" />
+    <fragment
+        android:id="@+id/fragmentHeartRate"
+        android:name="nl.dylandavid.project2.duoapp.FragmentHeartRate"
+        android:label="fragment_heart_rate"
+        tools:layout="@layout/fragment_heart_rate" />
+</navigation>

@@ -1,14 +1,521 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tab1Fragment">
+    tools:context=".Tab1Fragment"
+    tools:layout_editor_absoluteX="-5dp"
+    tools:layout_editor_absoluteY="-386dp">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ayylmao1" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContactAssistant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMIMeasureCard">
+
+
+        <ImageButton
+            android:id="@+id/imageButton22"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/new_circle_profile_small"
+            android:clipToOutline="true"
+            android:padding="5dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            android:src="@mipmap/doctor2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_message_24"
+            android:clipToOutline="true"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView32"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/ic_baseline_phone_24"
+            android:clipToOutline="true"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.508" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:text="Contact Your GP"
+            android:textAllCaps="false"
+            android:textAppearance="@style/large_card_header"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/imageButton22"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="218dp"
+            android:layout_height="30dp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="10dp"
+            android:text="For any questions please contact us by sending a message or calling"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_primary"
+
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageButton22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="10dp"
+            android:text="in case of emergency always dial 112"
+            android:textAllCaps="false"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_secondary"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton22"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BMIMeasureCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:paddingRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heartRateCard">
+
+
+        <TextView
+            android:id="@+id/tvBMIUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Last update 12-09-2021"
+            android:textAllCaps="false"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvWCVal"
+            app:layout_constraintTop_toBottomOf="@+id/btnMeasureBMI" />
+
+        <Button
+            android:id="@+id/btnMeasureBMI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/button_large"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingVertical="1dp"
+            android:shadowColor="#40000000"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="Record"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvWeightVal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWeightVal"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="80kg"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvWeightLbl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWeightLbl2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="WC"
+            android:textAllCaps="false"
+            android:textColor="@color/red_primary"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvBMIVal"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeightLbl"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvWCVal"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+
+            android:text="80cm"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvWeightLbl2"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeightVal"
+            app:layout_constraintVertical_bias="0.542" />
+
+        <TextView
+            android:id="@+id/tvBMIVal"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-medium"
+            android:text="24.2"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBPCard" />
+
+        <TextView
+            android:id="@+id/tvBPCard"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+
+
+            android:drawableLeft="@drawable/ic_baseline_scale_24"
+
+            android:drawablePadding="2dp"
+            android:text="BMI"
+            android:textAllCaps="false"
+            android:textAppearance="@style/large_card_header"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWeightLbl"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+
+            android:layout_marginTop="4dp"
+            android:text="Weight"
+            android:textAllCaps="false"
+            android:textColor="@color/red_primary"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvBPCard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="75dp"
+            android:padding="15dp"
+            android:paddingTop="10dp"
+            android:text="Good morning D. Nas"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="5dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/new_circle_profile_small"
+            android:clipToOutline="true"
+            android:padding="5dp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            android:src="@mipmap/doctor2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:text="Appointment"
+            android:textAllCaps="false"
+            android:textAppearance="@style/large_card_header"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="10dp"
+            android:text="Your next checkup with Dr Rozenberg is scheduled for the 24th of November"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/heartRateCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_margin="5dp"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/tvHRVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/text_primary"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnMeasureHR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeartrate" />
+
+        <Button
+            android:id="@+id/btnMeasureHR"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_large"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="1dp"
+            android:shadowColor="#40000000"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="Measure"
+            android:elevation="100px"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvHRUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHeartrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heartrate"
+            android:textAllCaps="false"
+            android:textAppearance="@style/large_card_header"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHRUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Last update 12-09-2021"
+            android:textAllCaps="false"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/rectangle_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heartRateCard"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/tvBPUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Last update 12-09-2021"
+            android:textAllCaps="false"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBPVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="170/108"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/text_primary"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnMeasureBP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBloodPressure" />
+
+        <Button
+            android:id="@+id/btnMeasureBP"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_large"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="1dp"
+            android:shadowColor="#40000000"
+            android:text="Record"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvBPUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure"
+            android:textAllCaps="false"
+            android:textAppearance="@style/large_card_header"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
